@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplayer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <br>
+    <div class="gameContainer">
+        <div id="informacoesIniciais">
+            <div class="gangorra">
+                <div class="quadrado azul"></div>
+                <div class="quadrado vermelho"></div>
+            </div>
+            <h1 class="titulo-jogo">Melhor Dupla</h1>
+            <input type="text" id="codigoIdentificador1" placeholder="Nome da Sala" class="input-field">
+            <input type="text" id="codigoIdentificador2" placeholder="Senha de Acesso" class="input-field">
+            <div class="button-container">
+                <button class="button margin-right">Criar</button>
+                <button class="button margin-left">Entrar</button>
+            </div>
+        </div>
+        <div class="game-board" id="gameBoard" style="display:none">
+        </div>
+        <div class="controls1">
+            <button id="up" class="control-button">↑</button>
+        </div>
+        <div class="controls2">
+            <button id="left" class="control-button">←</button>
+            <button id="down" class="control-button">↓</button>
+            <button id="right" class="control-button">→</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>
