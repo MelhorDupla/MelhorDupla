@@ -1,0 +1,146 @@
+body {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.titulo-jogo {
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    text-align: center;
+    color: aquamarine;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    animation: alternarCor 2s infinite alternate
+}
+
+.gangorra {
+    position: relative;
+    width: 200px;
+    height: 30px;
+    background-color: aquamarine;
+    border-radius: 10px;
+    overflow: hidden;
+    transform-origin: center;
+    animation: balancar 2s infinite alternate;
+}
+
+.quadrado {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+}
+
+.azul {
+    background-color: blue;
+    left: 25px; /* Posição inicial do quadrado azul */
+}
+
+.vermelho {
+    background-color: red;
+    right: 25px; /* Posição inicial do quadrado vermelho */
+}
+
+@keyframes balancar {
+    0% {
+        transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(15deg);
+    }
+}
+
+@keyframes alternarCor {
+    0% {
+        color: blue;
+    }
+    50% {
+        color: aquamarine;
+    }
+    100% {
+        color: red;
+    }
+}
+
+.input-field {
+    height: 32px;
+    width: 180px;
+    margin-bottom: 10px;
+}
+
+.button {
+    height: 32px;
+    width: 80px;
+    background-color: aquamarine;
+    border-color: aqua;
+}
+
+.button-container {
+    display: flex;
+    margin-top: 10px;
+}
+
+.margin-right {
+    margin-right: 10px;
+}
+
+.margin-left {
+    margin-left: 10px;
+}
+
+#informacoesIniciais {
+    width: 400px;
+    height: 400px;
+    background-color: #000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-board {
+    width: 400px;
+    height: 400px;
+    background-color: #000;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    gap: 1px;
+}
+
+
+.controls1 {
+    margin-top: 20px;
+    display: flex;
+}
+.controls2 {
+    display: flex;
+}
+
+.control-button {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    margin: 5px;
+    cursor: pointer;
+}
+.control-button2 {
+    width: 80px;
+    height: 50px;
+    font-size: 12px;
+    margin: 5px;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    vertical-align: center;
+}
